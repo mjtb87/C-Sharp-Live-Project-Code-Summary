@@ -1,5 +1,5 @@
-# Code-Summary-C-Sharp
-##Introduction
+# C Sharp Live Project Code Summary
+## Introduction
 
 After the two week live Python project at The Tech Academy, I got to jump into my next two week live project,
 the C# live project. The development project was writing software to manage a collection of construction jobs. As 
@@ -12,9 +12,9 @@ and understand the design of a particular code.
 
 Onto the contributions I made to the project, the challenges I faced and what I learned from them. 
 
-###Week 1
+### Week 1
 
-#####The Problem #1
+##### The Problem #1
 
 My first week and task started off on a very interesting note. For context, the software is set up in such a way that 
 the admin would set and send out a user name, role in the company and registration code that the user would receive and 
@@ -92,7 +92,7 @@ generate.
         </div>
     </div>
 
-#####The Solution #1
+##### The Solution #1
 
 After noticing the user's role was not being utilized I dove into the corresponding controller to see where the issue was.
 Below is the finished code after the problem was solved. I have used 3 asterisks to highlight the code relating to the 
@@ -150,12 +150,12 @@ and it is one that I rather enjoy examining.
             return View(model);
         }
 
-#####The Problem #2
+##### The Problem #2
 
 The next story was straight forward one. I had to add authentication and functionality to restrict the views available
 to non-registered users. In addition to this I also wanted to remove the views to be restricted from the navigation bar.
 
-#####The Solution #2
+##### The Solution #2
 
 First the nav bar! I got lucky here as the code was already set up in such a way where all the options I wanted to 
 limit fell in the same code block. All I had to do was place a conditional statement that I already had experience with 
@@ -278,7 +278,7 @@ I have included an example below of the "Jobs" controller that I modified. That 
 Moral of the story, The solution to a problem is usually closer then you think it is. Such is life that you travel a 
 great distance only to find the answer was right next to you the whole time.
 
-#####The Problem #3
+##### The Problem #3
 
 My next story didn't require as much detective work as the first two. The assignment was to add a view that encapsulated
 both users who were already resisted and users who had a registration code sent to them, but had not completed the 
@@ -287,7 +287,7 @@ in other parts of the program. The only wall I hit was that I couldn't use two m
 
   
 
-#####The Solution #3
+##### The Solution #3
 
 Below is the view that I wound up creating. You will see that I highlighted the CreateUserRequest model at the top of the
 page, with 3 asterisks, that I used for the users that are not fully registered. Below that, I highlighted the view
@@ -361,9 +361,9 @@ to reflect the creation of this new view page. While this story was simple, it w
 a state of work flow. Having certain tasks become second nature allows me to balance time and energy when I hit a wall or
 a task that requires more critical thinking. 
 
-###Week 2
+### Week 2
 
-#####The Problem #4
+##### The Problem #4
 
 My first story for the second week of the C# live project was an interesting one. The admin has the ability to edit the 
 schedule for the week via the "edit" view in the schedule tab. My task was to have the current values of the selected 
@@ -372,7 +372,7 @@ on the view side of things. I found some limitations in the .Net framework that 
 focus to the controller side to look for a solution. I noticed we were not passing the whole model to the view but rather
 using 2 different functions to select job sites and the users. It is here where I found the path to success.
 
-#####The Solution #4
+##### The Solution #4
 
 In the code snippets below you will find both the aforementioned "GetJobSites" and "GetUsers" functions. After a bit of 
 research and learning about SelectListItem, I found that I could use a the "Selected" variable to choose an item to
@@ -483,7 +483,7 @@ see where I have utilize the both ViewBag.person and ViewBag.jobsite to create t
                 </div>
             </div>
             
-#####The Problem #5
+##### The Problem #5
 
 This one was another fun one. The issue here was concerning the chat feature that our program has. Below is the 
 ChatMessage model as it existed when we had the issue. You'll notice that the data type for the variable for "Sender" 
@@ -506,7 +506,7 @@ could not be deleted from the program without first deleting all of their messag
         }
     } 
 
-#####The Solution #5
+##### The Solution #5
 
 This was the first chance I got to work with making migrations and changing an actively utilized class. All we really
 needed was the user name of the Application user for the chat to function. First things first. The code below reflects
@@ -581,11 +581,11 @@ After this was complete all I had to do was make the necessary migrations. In th
 side of things. What it gave me the most practice with was making migrations properly as to protect the integrity.
 As I will touch on in the upcoming story retrospective, migrations became a reoccurring theme.
 
-#####The Problem #6
+##### The Problem #6
 
 This story was super easy. The task was to change an enum in our "state" enum list.
 
-#####The Solution #6
+##### The Solution #6
 
 There's not too much to talk about here. Below is the before and after of the code. I had to change the Idaho enum to 
 California. When I get stories like this that are very straight foreword, I like to see how quickly and efficiently I
@@ -612,13 +612,13 @@ make the times I need to critically think more balanced. As before, the relevant
         ***CA***
     }
     
-#####The Problem #7
+##### The Problem #7
 
 This next story was another good one for practicing efficiency with straight forward tasks and making migrations.
 My task here was to add an attribute to the "IdentityModel" Users class and make the necessary migrations.
 
 
-#####The Solution #7
+##### The Solution #7
 
 Below is the attributes from the "IdentityModel" class and as you may have guessed by now, the code I added is 
 highlighted with 3 asterisks. This was another simple story however having to make new migrations gave my a little more
@@ -636,7 +636,7 @@ responsibility here.
     ***public bool Suspended { get; set; }***
     
 
-#####The Problem #8
+##### The Problem #8
 
 This one was another migrations story but this time instead of editing an existing model, I was creating a new one and
 prepping the rest of the project to accept the new class where necessary. I had to add the class "ShiftTime" and model
@@ -648,7 +648,7 @@ always going to know or have communicated the entirety of a project or a part of
 determine the best course of action on my own and be patient with the fact that I eventually will learn how things are
 going to come together, even if it takes a little while.
 
-#####The Solution #8
+##### The Solution #8
  
 Below is the ShiftTime class I wrote based off of our database schema. 
  
